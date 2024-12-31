@@ -13,5 +13,14 @@ function dockex {
 sudo docker exec -it $1 sh
 }
 
+# Upload aliases to github
+function bashup {
+git -C ~/.git/sync-bash-alias push
+}
 
+# Download latest alias file from github
+function bashdown {
+git -C ~/.git/sync-bash-alias pull
+source ~/.git/sync-bash-alias/.bashrc
+}
 	
